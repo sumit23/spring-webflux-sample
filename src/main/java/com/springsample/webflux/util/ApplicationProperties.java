@@ -1,6 +1,5 @@
 package com.springsample.webflux.util;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import lombok.Getter;
@@ -18,9 +17,5 @@ public class ApplicationProperties {
 
     public ApplicationProperties() {
     }
-
-    @Value("${twilio.from.phonunumber: #{null}}")
-    private String twilioFromPhoneNumber;
-
 }
 

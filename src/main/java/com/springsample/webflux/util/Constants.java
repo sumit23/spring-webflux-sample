@@ -2,9 +2,8 @@ package com.springsample.webflux.util;
 
 public class Constants {
 
-
     public static enum StatusCodes {
-        SUCCESS, INTERNAL_SERVER_ERROR, BAD_REQUEST;
+        SUCCESS, INTERNAL_SERVER_ERROR, BAD_REQUEST, NOT_FOUND;
         
     	public static String getStatusDesc(StatusCodes status) {
             String desc = null;
@@ -19,6 +18,9 @@ public class Constants {
                     break;
                 case BAD_REQUEST:
                     desc = "BAD_REQUEST";
+                    break;
+                case NOT_FOUND:
+                	desc = "NOT_FOUND";
                     break;
             }
 

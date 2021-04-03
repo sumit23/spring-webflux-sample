@@ -18,4 +18,5 @@ public class VehicleDto {
 	private String vin;
 	private String color;
 	private String year;
+	private int id;
 }

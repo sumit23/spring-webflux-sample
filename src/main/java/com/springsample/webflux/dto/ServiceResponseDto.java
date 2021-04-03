@@ -15,9 +15,9 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @ToString
 @Accessors(chain = true)
-public class ServiceResponseDto {
+public class ServiceResponseDto<T> {
 
-	private Object responseObject;
+	private T responseObject;
     private HttpHeaders responseHTTPHeaders;
     private Constants.StatusCodes status;
 

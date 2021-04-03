@@ -1,17 +1,19 @@
 package com.springsample.webflux.service;
 
+import java.util.List;
+
 import com.springsample.webflux.dto.ServiceResponseDto;
 import com.springsample.webflux.dto.VehicleDto;
 
 public interface VehicleService {
 
-	public ServiceResponseDto createVehicle (VehicleDto vehicleDto);
+	ServiceResponseDto<VehicleDto> createVehicle(VehicleDto vehicleDto);
 	
-	public ServiceResponseDto updateVehicle (VehicleDto vehicleDto);
+	ServiceResponseDto<VehicleDto> updateVehicle(VehicleDto vehicleDto);
 	
-	public ServiceResponseDto getVehicle (int vehicleId);
+	ServiceResponseDto<VehicleDto> getVehicle(int vehicleId);
 	
-	public ServiceResponseDto fetchVehicles (int vehicleId);
+	ServiceResponseDto<List<VehicleDto>> getVehiclesList();
 	
-	public ServiceResponseDto deleteVehicle (int vehicleId);
+	ServiceResponseDto<VehicleDto> deleteVehicle(int vehicleId);
 }
